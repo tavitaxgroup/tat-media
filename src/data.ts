@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'project-2',
-    category: 'strategic',
+    category: 'business',
     categoryLabel: '2026 — SPORTS EVENT',
     year: '2026',
     client: 'Tavitax Group',

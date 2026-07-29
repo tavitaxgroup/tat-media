@@ -14,6 +14,16 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     setCurrentImageIndex(0);
   }, [project?.id]);
 
+  useEffect(() => {
+    if (!project || !project.gallery || project.gallery.length <= 1) return;
+
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev === project.gallery!.length - 1 ? 0 : prev + 1));
+    }, 2000);
+
+    return () => clearInterval(timer);
+  }, [project?.id, currentImageIndex, project?.gallery]);
+
   if (!project) return null;
 
   return (
@@ -42,15 +52,17 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             <div className="relative aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-2xl group/modal bg-black/60">
               {/* Blurred background backdrop for filling letterbox space */}
               <img 
+                key={`bg-${currentImageIndex}`}
                 src={project.gallery && project.gallery.length > 0 ? project.gallery[currentImageIndex] : project.image} 
                 alt=""
-                className="absolute inset-0 w-full h-full object-cover blur-xl opacity-30 scale-105 pointer-events-none select-none"
+                className="absolute inset-0 w-full h-full object-cover blur-xl opacity-30 scale-105 pointer-events-none select-none animate-fade-in"
               />
               {/* Main contained image to see everything */}
               <img 
+                key={`main-${currentImageIndex}`}
                 src={project.gallery && project.gallery.length > 0 ? project.gallery[currentImageIndex] : project.image} 
                 alt={project.title}
-                className="relative z-10 w-full h-full object-contain contrast-[1.05] transition-all duration-700 select-none"
+                className="relative z-10 w-full h-full object-contain contrast-[1.05] select-none animate-fade-in"
               />
               {/* Subtle top/bottom shadow gradients */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none z-20" />
