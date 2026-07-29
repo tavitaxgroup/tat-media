@@ -121,7 +121,6 @@ export const PROJECTS: Project[] = [
       '/assets/Tavitax-CUP/Hong Quan-1194.JPG',
       '/assets/Tavitax-CUP/Hong Quan-1219.JPG',
       '/assets/Tavitax-CUP/Hong Quan-1232.JPG',
-      '/assets/Tavitax-CUP/Hong Quan-1233.JPG',
       '/assets/Tavitax-CUP/Hong Quan-1235.JPG',
       '/assets/Tavitax-CUP/Hong Quan-1257.JPG',
       '/assets/Tavitax-CUP/Hong Quan-1265.JPG',
