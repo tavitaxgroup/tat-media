@@ -198,34 +198,34 @@ export default function App() {
               {/* Grid characteristic subcards for Sứ mệnh */}
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-5 border border-white/10 hover:border-secondary/30 hover:bg-white/[0.02] transition-premium rounded-2xl group active:scale-[0.99] space-y-2">
-                  <h4 className="font-display font-bold text-sm uppercase tracking-wide text-white group-hover:text-secondary transition-colors">
+                  <h4 className="font-display font-bold text-base uppercase tracking-wide text-white group-hover:text-secondary transition-colors">
                     Sự kiện khác biệt
                   </h4>
-                  <p className="text-xs text-white/50 leading-relaxed font-sans">
+                  <p className="text-sm text-white/50 leading-relaxed font-sans">
                     Mang đến chương trình sự kiện chất lượng, chuyên nghiệp và khác biệt.
                   </p>
                 </div>
                 <div className="p-5 border border-white/10 hover:border-secondary/30 hover:bg-white/[0.02] transition-premium rounded-2xl group active:scale-[0.99] space-y-2">
-                  <h4 className="font-display font-bold text-sm uppercase tracking-wide text-white group-hover:text-secondary transition-colors">
+                  <h4 className="font-display font-bold text-base uppercase tracking-wide text-white group-hover:text-secondary transition-colors">
                     Thương hiệu bền vững
                   </h4>
-                  <p className="text-xs text-white/50 leading-relaxed font-sans">
+                  <p className="text-sm text-white/50 leading-relaxed font-sans">
                     Hỗ trợ doanh nghiệp xây dựng hình ảnh thương hiệu bền vững lâu dài.
                   </p>
                 </div>
                 <div className="p-5 border border-white/10 hover:border-secondary/30 hover:bg-white/[0.02] transition-premium rounded-2xl group active:scale-[0.99] space-y-2">
-                  <h4 className="font-display font-bold text-sm uppercase tracking-wide text-white group-hover:text-secondary transition-colors">
+                  <h4 className="font-display font-bold text-base uppercase tracking-wide text-white group-hover:text-secondary transition-colors">
                     Giá trị kết nối
                   </h4>
-                  <p className="text-xs text-white/50 leading-relaxed font-sans">
+                  <p className="text-sm text-white/50 leading-relaxed font-sans">
                     Tạo ra giá trị kết nối thiết thực giữa doanh nghiệp, khách hàng và cộng đồng.
                   </p>
                 </div>
                 <div className="p-5 border border-white/10 hover:border-secondary/30 hover:bg-white/[0.02] transition-premium rounded-2xl group active:scale-[0.99] space-y-2">
-                  <h4 className="font-display font-bold text-sm uppercase tracking-wide text-white group-hover:text-secondary transition-colors">
+                  <h4 className="font-display font-bold text-base uppercase tracking-wide text-white group-hover:text-secondary transition-colors">
                     Giải pháp sáng tạo
                   </h4>
-                  <p className="text-xs text-white/50 leading-relaxed font-sans">
+                  <p className="text-sm text-white/50 leading-relaxed font-sans">
                     Đồng hành cùng sự phát triển qua các giải pháp truyền thông sáng tạo.
                   </p>
                 </div>
@@ -363,7 +363,7 @@ export default function App() {
           </div>
 
           {/* Filtering control bar */}
-          <div className="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto bg-primary/40 p-1.5 border border-white/5">
+          <div className="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto bg-primary/40 p-1.5 border border-white/5 rounded-full">
             {[
               { id: 'all', label: 'Tất cả' },
               { id: 'strategic', label: 'Hội nghị & Gala' },
@@ -373,7 +373,7 @@ export default function App() {
               <button
                 key={cat.id}
                 onClick={() => setProjectFilter(cat.id as any)}
-                className={`px-5 py-2.5 text-xs font-display font-bold uppercase tracking-wider transition-all cursor-pointer ${
+                className={`px-5 py-2.5 text-xs font-display font-bold uppercase tracking-wider transition-all cursor-pointer rounded-full ${
                   projectFilter === cat.id 
                     ? 'bg-secondary text-white shadow-md' 
                     : 'text-white/60 hover:text-white hover:bg-white/5'
