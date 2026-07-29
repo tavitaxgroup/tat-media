@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+// Force Vercel rebuild to invalidate Tailwind compile cache
 import { Project, ConsultationInquiry } from './types';
 import { PROJECTS, INITIAL_INQUIRIES } from './data';
 import Header from './components/Header';

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import '../index.css';
 
+// Force rebuild of app layout to clear Tailwind CSS compilation caches
 export const metadata: Metadata = {
   title: 'TAT Media & Event',
   description: 'Event and media ecosystem for strategic business experiences.'
